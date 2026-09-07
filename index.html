@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    
+        <dialog id="bonafide-modal" class="modal-content">
+            <div class="wrapper">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Proin eget erat ligula. Ut aliquam sagittis est, sit amet molestie elit lobortis at. 
+                Ut malesuada vestibulum massa, at laoreet diam porttitor eu. Morbi facilisis et sem et vulputate. 
+                Aliquam sit amet pretium lacus. Orci varius natoque penatibus et magnis dis parturient montes, 
+                nascetur ridiculus mus. Maecenas in orci lorem. Pellentesque imperdiet risus nisl, ac efficitur quam tempus commodo. 
+                Fusce tempor ipsum nec nunc aliquam, vitae volutpat sapien lacinia. Praesent pellentesque, 
+                nunc sit amet auctor porttitor, justo odio dignissim sapien, ac placerat tellus nulla eu libero. 
+                Mauris at pulvinar est, maximus varius massa. Nullam sit amet neque non felis tristique imperdiet eget et tellus.
+                Fusce nec enim sapien. Fusce vestibulum ligula ut quam cursus eleifend. In rutrum condimentum risus eu sollicitudin. 
+                Morbi ut sem libero. Fusce blandit interdum ipsum nec iaculis. In vitae odio congue, imperdiet urna vel, 
+                commodo magna. Mauris in auctor nisl. Quisque vitae massa ut ipsum rutrum feugiat. Nullam rhoncus, 
+                leo eu fermentum pulvinar, dui arcu porttitor felis, nec mattis enim massa eu libero.
+                Cras dolor ex, vehicula nec elementum eget, pellentesque sit amet leo. Quisque tincidunt augue et enim finibus, 
+                ac condimentum tellus accumsan. Vivamus vulputate ante id.
+            </div>
+        </dialog>
+    
+
+        <dialog id="icon-modal" class="modal-content">
+            <div class="wrapper">
+                This is the Modal
+            </div>
+        </dialog>
+
+
+    
+    
+        <header>
+            <div>
+                <img src="logos/Bonafide Brokerage Logo Black.png" alt="Bonafide Brokerage" class="header-logo">
+            </div>
+        </header>
+
+
+    <div style="display: flex; justify-content: center; align-items: start;">
+        <div class="main">
+
+
+            <div class="intro">
+                <div style="font-size: 4.5rem; padding: 2rem .5rem .5rem; text-align: center;">
+                    Quality Real Estate Personified
+                </div>
+                <div style="font-size: 1.5em; padding: .5em 3em 1.2em;">
+                    Bonafide Brokerage is a residential brokerage ready to manage all of your real estate buying, selling, listing and leasing needs for the next big step in your life.
+                </div>
+            </div>
+
+
+            <div class="button-listings">
+                <div style="grid-area: ls-background;">
+                </div>
+                <div class="ls-title">
+                    Listings
+                </div>
+            </div>
+
+
+            <div class="button-agents">
+                <div style="grid-area: agent-background;">
+                </div>
+                <div class="agent-title">
+                    Contact an Agent
+                </div>
+            </div>
+
+
+            <div class="button-instagram">
+                <a href="https://www.instagram.com/bonafide.brokerage?igsh=MXg0bHE2cnhpb3ZmOq==" class="link" target="_blank">
+                    <img src="icons/instagram_icon.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+
+
+            <button class="button-bonafide" onclick="showBonafideModal()">
+                <div style="width: 100%;">
+                    <img src="logos/Bonafide Logo Short Light Grey.png" alt="Instagram" class="bonafide-icon">
+                </div>
+            </button>
+
+
+            <div class="button-facebook">
+                <a href="https://www.facebook.com/profile/php?id=61591720341549" class="link" target="_blank">
+                    <img src="icons/facebook_icon.png" alt="Facebook" class="social-icon">
+                </a>
+            </div>
+
+
+            <div class="button-real-estate-logos">
+                <div>
+                    <img src="icons/Equal Housing Opportunity Black.png" alt="Equal Housing Opportunity" class="real-estate-logos">
+                </div>
+                <div>
+                    <img src="icons/Accredited_Business_Seal_Rating_Grayscale.png" alt="Better Business Bureau" class="real-estate-logos">
+                </div>
+                <div>
+                    <img src="icons/Realtor Logo Orig.png" alt="Board of Realtors" class="real-estate-logos">
+                </div>
+                <div>
+                    <img src="icons/MLS Logo Black.png" alt="MLS" class="real-estate-logos">
+                </div>
+                
+            </div>
+
+            
+
+
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+
+    <script>
+        const dialog = document.getElementById("bonafide-modal")
+        const wrapper = document.querySelector(".wrapper")
+        function showBonafideModal(){
+            dialog.showModal()
+        }
+
+        dialog.addEventListener('click', (e) => {
+            if(!wrapper.contains(e.target)){
+                dialog.close()
+            }
+        })
+    </script>
+
+    <div>
+        <footer>
+            Footer
+        </footer>
+    </div>
+</body>
+</html>

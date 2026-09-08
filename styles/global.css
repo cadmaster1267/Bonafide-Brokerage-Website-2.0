@@ -62,10 +62,20 @@ header {
         "facebook bonafide instagram listing listing listing"
         "agent agent agent listing listing listing"
         "agent agent agent rslogos rslogos rslogos";
-    padding: 5rem min(15rem);
+    padding: 5rem 0;
     max-height: 150rem;
 
+}
 
+.ls-main {
+    margin: 8rem auto;
+    display: flex;
+    gap: 8rem;
+    max-height: 150rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: min(80vw, 200rem)
 }
 
 footer {
@@ -88,10 +98,18 @@ footer {
     grid-area: intro;
     border-radius: var(--home-bento-corner);
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
-    max-width: (90vw);
+    width: min(100rem, 90vw);
+}
 
-
-
+.ls-bio {
+    
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(180deg, rgb(255, 230, 245), rgba(255, 255, 255, 0.3));
+    grid-area: intro;
+    border-radius: var(--home-bento-corner);
+    box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
+    padding: 8rem 10rem;
 }
 
 .button-listings {
@@ -102,7 +120,6 @@ footer {
     background-image: url(../pictures/front_house.jpg);
     background-size: cover;
     background-position: center;
-    grid-area: listing;
     border-radius: var(--home-bento-corner);
     grid-template-areas: 
         "ls-background"
@@ -112,16 +129,13 @@ footer {
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
     min-height: 20rem;
     min-width: 15rem;
-
-
-
+    text-decoration-color: rgba(0, 0, 0, 5);
 }
 
 .button-agents {
     
     display: grid;
     place-items: center;
-    grid-area: agent;
     border-radius: var(--home-bento-corner);
     grid-template-rows: auto 40% auto;
     background-image: url(../pictures/house-with-paperwork.jpg);
@@ -133,7 +147,9 @@ footer {
         ".";
     font-size: 3rem;
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
-
+    text-decoration: none;
+    min-height: 25rem;
+    color: black;
 
 }
 
@@ -205,7 +221,7 @@ footer {
     text-align: center;
     padding: 3rem;
     row-gap: 5%;
-    column-gap: 13%;
+    column-gap: 6%;
 }
 
 .link {
@@ -223,6 +239,7 @@ footer {
     place-items: center;
     font-size: min(3.5rem, 6vh);
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
+    color: black;
 
 }
 
@@ -256,3 +273,10 @@ footer {
 dialog::backdrop {
     background-color: rgba(0, 0, 0, .6);
 }
+
+page-link {
+    color: inherit;
+    text-decoration-color: rgba(0, 0, 0, .5);
+    display: block
+}
+

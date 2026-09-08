@@ -2,6 +2,8 @@
     --bonafide-blue: rgb(35, 43, 61);
     --bonafide-tan: rgb(253, 249, 241);  
     --home-bento-corner: 3rem;
+    --mobile-bento-corner: 1.2rem;
+
 
 }
 
@@ -62,10 +64,14 @@ header {
         "facebook bonafide instagram listing listing listing"
         "agent agent agent listing listing listing"
         "agent agent agent rslogos rslogos rslogos";
-    padding: 5rem 0;
+    padding: 5rem 10rem;
     max-height: 150rem;
-
 }
+
+
+
+
+
 
 .ls-main {
     margin: 8rem auto;
@@ -84,10 +90,12 @@ footer {
 }
 
 .header-logo {
-    height: 220px;
-    max-height: 30vh;
-    padding: 30px 50px 20px;
+    width: min(60rem, 80vw);
+    height: auto;
+
+
 }
+
 
 
 .intro {
@@ -98,7 +106,17 @@ footer {
     grid-area: intro;
     border-radius: var(--home-bento-corner);
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
-    width: min(100rem, 90vw);
+}
+
+.intro-header {
+    font-size: 4.5rem; 
+    padding: 2rem .5rem .5rem; 
+    text-align: center;
+}
+
+.intro-body {
+    font-size: 1.5em; 
+    padding: .5em 3em 1.2em;
 }
 
 .ls-bio {
@@ -280,3 +298,132 @@ page-link {
     display: block
 }
 
+@media screen and (max-width: 800px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1.0fr 1.2fr 1.0fr;
+        grid-template-rows: 1fr 15rem 7rem 15rem 1fr;
+        gap: .8rem;
+        grid-template-areas: 
+            "intro intro intro"
+            "listing listing listing"
+            "facebook bonafide instagram"
+            "agent agent agent"
+            "rslogos rslogos rslogos";
+        padding: 2rem 2rem;
+        max-height: 150rem;
+    }
+
+    .intro-header {
+        font-size: 2rem; 
+        padding: 1rem .25rem .25rem; 
+        text-align: center;
+    }
+
+    .intro-body {
+        font-size: .75rem; 
+        padding: .25rem 1.5rem .5rem;
+    }
+
+    .social-icon {
+        width: 3rem;
+        max-width: 20vw;
+        filter: invert(100%);
+        padding: 1rem;
+    }
+
+    .bonafide-icon {
+        width: 4rem;
+        max-width: 20vw;
+        filter: invert(100%);
+        padding: 1rem;
+    }
+
+    .button-agents {
+        display: grid;
+        place-items: center;
+        border-radius: var(--mobile-bento-corner);
+        grid-template-rows: auto 40% auto;
+        background-image: url(../pictures/house-with-paperwork.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-template-areas: 
+            "agent-background"
+            "agent-title"
+            ".";
+        font-size: 1rem;
+        box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
+        text-decoration: none;
+        min-height: 15rem;
+        color: black;
+    }
+
+    .button-listings {
+        display: grid;
+        grid-template-rows: auto 40% auto;
+        place-items: center;
+        background-image: url(../pictures/front_house.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: var(--mobile-bento-corner);
+        grid-template-areas: 
+            "ls-background"
+            "ls-title"
+            ".";
+        font-size: 1rem;
+        box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
+        min-height: 15rem;
+        min-width: 15rem;
+        text-decoration-color: rgba(0, 0, 0, 5);
+    }
+
+    header {
+        display: grid;
+        background-color: var(--bonafide-tan);
+        box-shadow: 0px 4px 5px rgb(17, 17, 17);
+        align-items: center;
+        justify-content: center;
+        height: 8rem;
+        max-height: 30vh;
+        overflow: hidden;
+    }
+
+    .intro {
+        display: grid;
+        place-items: center;
+        background-color: rgba(255, 255, 255, 0.904);
+        grid-area: intro;
+        border-radius: var(--mobile-bento-corner);
+        box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
+    }
+
+    .button-facebook {
+        border-radius: var(--mobile-bento-corner);
+    }
+
+    .button-bonafide {
+        border-radius: var(--mobile-bento-corner);
+    }
+
+    .button-instagram {
+        border-radius: var(--mobile-bento-corner);
+    }
+
+    .button-real-estate-logos {
+        border-radius: var(--mobile-bento-corner);
+    }
+
+    .header-logo {
+        width: min(25rem, 80vw);
+        height: auto;
+        padding: 1rem;
+    }
+
+    .ls-title {
+        font-size: min(1.8rem, 6vh);
+    }
+
+    .agent-title {
+        font-size: min(1.8rem, 6vh);
+    }
+}

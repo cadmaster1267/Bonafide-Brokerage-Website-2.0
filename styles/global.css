@@ -298,7 +298,7 @@ page-link {
     display: block
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .main {
         display: grid;
         grid-template-columns: 1.0fr 1.2fr 1.0fr;

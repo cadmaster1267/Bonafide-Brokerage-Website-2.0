@@ -29,13 +29,6 @@
     </dialog>
 
 
-    <dialog id="icon-modal" class="modal-content">
-        <div class="wrapper">
-            This is the Modal
-        </div>
-    </dialog>
-
-
 
 
     <header>
@@ -135,15 +128,15 @@
 
 
     <script>
-        const dialog = document.getElementById("bonafide-modal")
+        const dialog01 = document.getElementById("bonafide-modal")
         const wrapper = document.querySelector(".wrapper")
         function showBonafideModal(){
-            dialog.showModal()
+            dialog01.showModal()
         }
 
-        dialog.addEventListener('click', (e) => {
+        dialog01.addEventListener('click', (e) => {
             if(!wrapper.contains(e.target)){
-                dialog.close()
+                dialog01.close()
             }
         })
     </script>

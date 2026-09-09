@@ -29,38 +29,37 @@
             <div class="ls-main">
 
 
-                <div class="ls-bio">
-                    Available Listings 01
-                </div>
+                <button data-open-modal="modal01" class="ls-bio">
+                    Available Listing 01
+                </button>
 
-                <div class="ls-bio">
-                    Available Listings 02
-                </div>
-                <div class="ls-bio">
-                    Available Listings 03
-                </div>
-                <div class="ls-bio">
-                    Available Listings 04
-                </div>
-                <div class="ls-bio">
-                    Available Listings 05
-                </div>
-                <div class="ls-bio">
-                    Available Listings 06
-                </div>
+               <dialog data-modal="modal01" class="listing-pop-up">
+                    <div>
+                        Listings Coming Soon!
+                    </div>
+                </dialog>
 
-                <div class="ls-bio">
-                    Available Listings 07
-                </div>
-                <div class="ls-bio">
-                    Available Listings 08
-                </div>
-                <div class="ls-bio">
-                    Available Listings 09
-                </div>
-                <div class="ls-bio">
-                    Available Listings 10
-                </div>
+                <button data-open-modal="modal02" class="ls-bio">
+                    Available Listing 02
+                </button>
+
+                <dialog data-modal="modal02" class="listing-pop-up">
+                    <div>
+                        Listings Coming Soon!
+                    </div>
+                </dialog>
+
+                <button data-open-modal="modal03" class="ls-bio">
+                    Available Listing 03
+                </button>
+
+                <dialog data-modal="modal03" class="listing-pop-up">
+                    <div>
+                        Listings Coming Soon!
+                    </div>
+                </dialog>
+                
+                
                 
             </div>
         </div>
@@ -72,5 +71,35 @@
             Joan Gill - Brokers License # B.1003347
         </footer>
     </div>
+
+    <script>
+        const openButtons = document.querySelectorAll("[data-open-modal]");
+        const closeButtons = document.querySelectorAll("[data-close-modal]");
+
+        openButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const modalID = button.dataset.openModal;
+                const modal = document.querySelector(
+                    `[data-modal="${modalID}"]`
+                );
+
+                modal.showModal();
+            });
+        })
+
+        closeButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                button.closest("dialog").close();
+            });
+        });
+
+        document.querySelectorAll("dialog").forEach(modal => {
+            modal.addEventListener("click", (event) => {
+                if (event.target === modal) {
+                    modal.close();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

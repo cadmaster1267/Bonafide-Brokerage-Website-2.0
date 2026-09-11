@@ -26,38 +26,9 @@
         </div>
 
         <div style="display: flex; justify-content: center; align-items: start;">
-            <div class="ls-main">
 
-
-                <button data-open-modal="modal01" class="ls-bio">
-                    <div class="listing-card">
-                        <div class="listing-card-header">
-                            $525,000
-                        </div>
-                    </div>
-                </button>
-
-               <dialog data-modal="modal01" class="listing-pop-up">
-                    <div>
-                        Listings Coming Soon!
-                    </div>
-                </dialog>
-                
-                <button data-open-modal="modal02" class="ls-bio">
-                    <div class="listing-card">
-                        <div class="listing-card-header">
-                            $457,000
-                        </div>
-                    </div>
-                </button>
-
-               <dialog data-modal="modal02" class="listing-pop-up">
-                    <div>
-                        Listings Coming Soon!
-                    </div>
-                </dialog>
-                
-            </div>
+            <div id="listings-container" class="ls-main">  </div>
+            
         </div>
     </div>
 
@@ -68,34 +39,8 @@
         </footer>
     </div>
 
-    <script>
-        const openButtons = document.querySelectorAll("[data-open-modal]");
-        const closeButtons = document.querySelectorAll("[data-close-modal]");
+    <script src="listings.js"></script>
 
-        openButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const modalID = button.dataset.openModal;
-                const modal = document.querySelector(
-                    `[data-modal="${modalID}"]`
-                );
 
-                modal.showModal();
-            });
-        })
-
-        closeButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                button.closest("dialog").close();
-            });
-        });
-
-        document.querySelectorAll("dialog").forEach(modal => {
-            modal.addEventListener("click", (event) => {
-                if (event.target === modal) {
-                    modal.close();
-                }
-            });
-        });
-    </script>
 </body>
 </html>

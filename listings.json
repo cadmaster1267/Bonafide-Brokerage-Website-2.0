@@ -1,0 +1,522 @@
+ [
+  {
+    "listingID": 1001,
+    "price": 525000,
+    "address": "Spanish Town Ave",
+    "propertyType": "House",
+    "descriptionShort": "This is a great house",
+    "listingNumberMLS": "ML123456798",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 3,
+        "fullBaths": 2,
+        "halfBaths": 1
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "2 car",
+        "stories": 2,
+        "lotSize": "1.2 acres",
+        "squareFootage": 2105,
+        "yearBuilt": 1989,
+        "parcelNumber": 98765432,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": false,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": false,
+        "energyStarRating": 8.5
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$500 a Month",
+        "region": "Lone Mountain"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 254,
+        "taxAssessedValue": 589000,
+        "dateOnMarket": "September 10, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1002,
+    "price": 684500,
+    "address": "Desert Willow Dr",
+    "propertyType": "House",
+    "descriptionShort": "Beautiful home with plenty of space",
+    "listingNumberMLS": "ML284716395",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 4,
+        "fullBaths": 3,
+        "halfBaths": 0
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "3 car",
+        "stories": 2,
+        "lotSize": "1.8 acres",
+        "squareFootage": 2685,
+        "yearBuilt": 2004,
+        "parcelNumber": 76241853,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": true,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": true,
+        "energyStarRating": 9.1
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$350 a Month",
+        "region": "Summerlin"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 255,
+        "taxAssessedValue": 631000,
+        "dateOnMarket": "September 9, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1003,
+    "price": 412000,
+    "address": "Mountain View Blvd",
+    "propertyType": "House",
+    "descriptionShort": "Comfortable home in a quiet area",
+    "listingNumberMLS": "ML619385274",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 3,
+        "fullBaths": 2,
+        "halfBaths": 0
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "2 car",
+        "stories": 1,
+        "lotSize": "0.8 acres",
+        "squareFootage": 1840,
+        "yearBuilt": 1996,
+        "parcelNumber": 45172963,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": false,
+        "sewer": "Shared Septic",
+        "solarHookUp": false,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": false,
+        "energyStarRating": 7.4
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": false,
+        "feesHOA": "$0 a Month",
+        "region": "Lone Mountain"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 224,
+        "taxAssessedValue": 438000,
+        "dateOnMarket": "September 7, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1004,
+    "price": 798000,
+    "address": "Red Rock Canyon Rd",
+    "propertyType": "House",
+    "descriptionShort": "Spacious property with modern upgrades",
+    "listingNumberMLS": "ML735194826",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 5,
+        "fullBaths": 3,
+        "halfBaths": 1
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "3 car",
+        "stories": 2,
+        "lotSize": "2.4 acres",
+        "squareFootage": 3150,
+        "yearBuilt": 2012,
+        "parcelNumber": 81635274,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": true,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": true,
+        "energyStarRating": 9.6
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$650 a Month",
+        "region": "Red Rock"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 253,
+        "taxAssessedValue": 742000,
+        "dateOnMarket": "September 5, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1005,
+    "price": 365000,
+    "address": "Cactus Ridge Ave",
+    "propertyType": "House",
+    "descriptionShort": "Charming starter home with a large lot",
+    "listingNumberMLS": "ML482617359",
+    "HVAC": false,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 2,
+        "fullBaths": 2,
+        "halfBaths": 0
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "1 car",
+        "stories": 1,
+        "lotSize": "0.6 acres",
+        "squareFootage": 1625,
+        "yearBuilt": 1982,
+        "parcelNumber": 62841795,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": false,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": false,
+        "energyStarRating": 6.8
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": false,
+        "feesHOA": "$0 a Month",
+        "region": "North Las Vegas"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 225,
+        "taxAssessedValue": 382000,
+        "dateOnMarket": "September 3, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1006,
+    "price": 592500,
+    "address": "Sagebrush Trail",
+    "propertyType": "House",
+    "descriptionShort": "Well-maintained home with great features",
+    "listingNumberMLS": "ML351928647",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 4,
+        "fullBaths": 2,
+        "halfBaths": 1
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "2 car",
+        "stories": 2,
+        "lotSize": "1.4 acres",
+        "squareFootage": 2380,
+        "yearBuilt": 2001,
+        "parcelNumber": 73918526,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": true,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": false,
+        "energyStarRating": 8.8
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$425 a Month",
+        "region": "Centennial Hills"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 249,
+        "taxAssessedValue": 564000,
+        "dateOnMarket": "September 2, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1007,
+    "price": 475000,
+    "address": "Golden Mesa St",
+    "propertyType": "House",
+    "descriptionShort": "Bright and inviting family home",
+    "listingNumberMLS": "ML927461583",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 3,
+        "fullBaths": 2,
+        "halfBaths": 1
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "2 car",
+        "stories": 1,
+        "lotSize": "1.1 acres",
+        "squareFootage": 1985,
+        "yearBuilt": 1991,
+        "parcelNumber": 58371642,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": false,
+        "sewer": "Shared Septic",
+        "solarHookUp": false,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": true,
+        "energyStarRating": 8.1
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$275 a Month",
+        "region": "Lone Mountain"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 239,
+        "taxAssessedValue": 497000,
+        "dateOnMarket": "August 30, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1008,
+    "price": 725000,
+    "address": "Silver Peak Dr",
+    "propertyType": "House",
+    "descriptionShort": "Elegant home with spacious living areas",
+    "listingNumberMLS": "ML163829475",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 4,
+        "fullBaths": 3,
+        "halfBaths": 1
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "3 car",
+        "stories": 2,
+        "lotSize": "2.1 acres",
+        "squareFootage": 2920,
+        "yearBuilt": 2008,
+        "parcelNumber": 91462738,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": true,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": true,
+        "energyStarRating": 9.3
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$575 a Month",
+        "region": "Summerlin"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 248,
+        "taxAssessedValue": 681000,
+        "dateOnMarket": "August 28, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1009,
+    "price": 449900,
+    "address": "Desert Bloom Ln",
+    "propertyType": "House",
+    "descriptionShort": "Cozy home with plenty of outdoor space",
+    "listingNumberMLS": "ML594716283",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 3,
+        "fullBaths": 2,
+        "halfBaths": 0
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "2 car",
+        "stories": 1,
+        "lotSize": "0.9 acres",
+        "squareFootage": 1765,
+        "yearBuilt": 1999,
+        "parcelNumber": 46729185,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": false,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": false,
+        "energyStarRating": 7.9
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": false,
+        "feesHOA": "$0 a Month",
+        "region": "North Las Vegas"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 255,
+        "taxAssessedValue": 421000,
+        "dateOnMarket": "August 25, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  },
+  {
+    "listingID": 1010,
+    "price": 638000,
+    "address": "Copper Canyon Way",
+    "propertyType": "House",
+    "descriptionShort": "Updated home in a desirable community",
+    "listingNumberMLS": "ML816493725",
+    "HVAC": true,
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": 5,
+        "fullBaths": 3,
+        "halfBaths": 0
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "2 car",
+        "stories": 2,
+        "lotSize": "1.6 acres",
+        "squareFootage": 2540,
+        "yearBuilt": 2006,
+        "parcelNumber": 72531864,
+        "zoning": "Section 8",
+        "newConstruction": false,
+        "foundation": "Slab",
+        "roof": "Composite"
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": true,
+        "sewer": "Shared Septic",
+        "solarHookUp": true,
+        "networking": "CAT-6 with panel",
+        "smartHomeCertified": true,
+        "energyStarRating": 9.0
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": true,
+        "feesHOA": "$475 a Month",
+        "region": "Centennial Hills"
+      },
+      {
+        "headerFinancial": "Valur and Listing Details",
+        "pricePSQF": 251,
+        "taxAssessedValue": 607000,
+        "dateOnMarket": "August 22, 2026",
+        "listingAgreement": "Exclusive Right to Sell"
+      }
+    ]
+  }
+]

@@ -30,25 +30,28 @@
 
 
 .ls-bio {
-    
     display: grid;
     grid-template-rows: 65% auto;
     place-items: center;
-    background: linear-gradient(180deg, rgb(255, 230, 245), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(
+        180deg,
+        rgb(255, 230, 245),
+        rgba(255, 255, 255, 0.3)
+    );
     grid-area: intro;
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
     border: none;
     font-size: 1.5rem;
     border-radius: var(--home-bento-corner);
-    width: 30rem;
-    height: 35rem;
-
+    width: 22rem;
+    height: 25rem;
+    overflow: hidden;
 }
 
 .ls-main {
     margin: 3rem auto 8rem;
     display: flex;
-    gap: 8rem;
+    gap: 2rem;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -56,14 +59,35 @@
 }
 
 .listing-images {
-    height: 60%;
-    width: 60%;
+    flex: 0 0 100%;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
+    scroll-snap-align: start;
 }
 
 .listing-card-images-area {
-
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
 }
+
+.listing-images-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.listing-images-container::-webkit-scrollbar {
+    display: none;
+}
+
 
 .listing-card-info {
     display: grid;
@@ -73,7 +97,49 @@
     border-radius: .2rem .2rem var(--home-bento-corner) var(--home-bento-corner);
     place-items: center;
     box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
+    border: none;
 
+}
+
+
+
+
+
+
+
+.image-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.image-arrow-left {
+    left: 10px;
+}
+
+.image-arrow-right {
+    right: 10px;
 }
 
 
@@ -118,15 +184,15 @@
     .ls-bio {
         place-items: center;
         border-radius: var(--mobile-bento-corner);
-        width: 20rem;
-        height: 23rem;
+        width: 15rem;
+        height: 20rem;
         max-width: 80vw;
     }
 
     .ls-main {
         margin: 3rem auto 8rem;
         display: flex;
-        gap: 3rem;
+        gap: .5rem;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;

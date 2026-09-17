@@ -270,10 +270,15 @@ footer {
     border-radius: 3.5rem;
     max-width: 80vw;
     width: 70rem;
+    max-height: 70vh;
 }
 
 .wrapper {
     padding: 2rem;
+}
+
+.wrapperItems {
+    padding: 1rem;
 }
 
 dialog::backdrop {
@@ -420,5 +425,17 @@ page-link {
     .real-estate-logos {
             height: min(6rem, 30vh);
     }
-584
+
+    .wrapperItems {
+        padding: .5rem;
+    }
+
+    .wrapper h2 {
+        font-size: 1.2rem;
+    }
+
+    .wrapper p {
+        font-size: .8rem;
+    }
+
 }

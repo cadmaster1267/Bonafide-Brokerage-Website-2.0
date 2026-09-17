@@ -11,20 +11,83 @@
     
     <dialog id="bonafide-modal" class="modal-content">
         <div class="wrapper">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Proin eget erat ligula. Ut aliquam sagittis est, sit amet molestie elit lobortis at. 
-            Ut malesuada vestibulum massa, at laoreet diam porttitor eu. Morbi facilisis et sem et vulputate. 
-            Aliquam sit amet pretium lacus. Orci varius natoque penatibus et magnis dis parturient montes, 
-            nascetur ridiculus mus. Maecenas in orci lorem. Pellentesque imperdiet risus nisl, ac efficitur quam tempus commodo. 
-            Fusce tempor ipsum nec nunc aliquam, vitae volutpat sapien lacinia. Praesent pellentesque, 
-            nunc sit amet auctor porttitor, justo odio dignissim sapien, ac placerat tellus nulla eu libero. 
-            Mauris at pulvinar est, maximus varius massa. Nullam sit amet neque non felis tristique imperdiet eget et tellus.
-            Fusce nec enim sapien. Fusce vestibulum ligula ut quam cursus eleifend. In rutrum condimentum risus eu sollicitudin. 
-            Morbi ut sem libero. Fusce blandit interdum ipsum nec iaculis. In vitae odio congue, imperdiet urna vel, 
-            commodo magna. Mauris in auctor nisl. Quisque vitae massa ut ipsum rutrum feugiat. Nullam rhoncus, 
-            leo eu fermentum pulvinar, dui arcu porttitor felis, nec mattis enim massa eu libero.
-            Cras dolor ex, vehicula nec elementum eget, pellentesque sit amet leo. Quisque tincidunt augue et enim finibus, 
-            ac condimentum tellus accumsan. Vivamus vulputate ante id.
+            <h2 class="wrapperItems">The Story of Bonafide Brokerage</h2>
+
+            <p class="wrapperItems">
+                Real estate has been part of my life for as long as I can remember.
+            </p>
+
+            <p class="wrapperItems">
+                My father built every home I lived in. My earliest years were in a home he built, and later, a magnificent home in the Hollywood Hills. It was there, that my lifelong love of real estate began. Seeing the vision, the planning, and the finished home planted a seed in me that would grow into a lifelong passion for real estate.
+            </p>
+
+            <p class="wrapperItems">
+                My career began in the beautiful mountain community of Lake Arrowhead, California, where I realized that real estate was more than just a job, it was something I was genuinely passionate about. It continued in Las Vegas, Nevada, collaborating with experienced brokers, learning, and building my knowledge of the industry. For years, I worked with families as they took important steps toward building their futures.
+            </p>
+
+            <p class="wrapperItems">
+                After earning my Real Estate Broker's License, <strong>Bonafide Brokerage was born.</strong> Bonafide Brokerage is built on a lifetime of mentors, and determination. But more importantly, it is built on knowledge and professional experience.
+            </p>
+
+            <p class="wrapperItems">
+                Whether you are Purchasing your very first home, Selling a home because life is changing, selling a family home filled with memories...<strong>Bonafide Brokerage is here to help guide you through the journey.</strong>
+            </p>
+
+            <p class="wrapperItems">
+                Our foundation is built on experience in real estate, and—most importantly—a genuine love for helping you start your next chapter. That is the dream we continue to build every day.
+            </p>
+
+            <h2 class="wrapperItems">
+                Bonafide Brokerage<small>-Built on Experience. Inspired by Your Next Chapter.</small>
+            </h2>
+        </div>
+    </dialog>
+
+    <dialog id="icons-modal" class="modal-content">
+        <div class="wrapper">
+            <h2 class="wrapperItems">Better Business Bureau</h2>
+
+            <p class="wrapperItems">
+                Bonafide Brokerage proudly operates in accordance with 
+                Equal Housing Opportunity principles, ensuring every client is 
+                treated with fairness, respect, and professionalism. We are 
+                committed to providing equal access to housing opportunities and 
+                guiding every client through their real estate journey with 
+                integrity and confidence.
+            </p>
+
+            <h2 class="wrapperItems">Equal Housing Opportunity</h2>
+
+            <p class="wrapperItems">
+                Bonafide Brokerage proudly operates in accordance with 
+                Equal Housing Opportunity principles, ensuring every client is 
+                treated with fairness, respect, and professionalism. We are 
+                committed to providing equal access to housing opportunities and 
+                guiding every client through their real estate journey with 
+                integrity and confidence.
+            </p>
+
+            <h2 class="wrapperItems">Realtor.com®</h2>
+
+            <p class="wrapperItems">
+                Bonafide Brokerage participates in the Realtor.com® 
+                real estate marketplace, giving our listings valuable 
+                exposure to consumers actively searching for properties. 
+                This platform helps us connect buyers and sellers while 
+                providing our clients with another powerful resource for 
+                navigating today’s real estate market.
+            </p>
+
+            <h2 class="wrapperItems">Multiple Listing Service (MLS)</h2>
+
+            <p class="wrapperItems">
+                Bonafide Brokerage participates in the Multiple Listing Service 
+                (MLS), connecting us with a professional network of real estate 
+                agents and brokers. This allows us to share and access current 
+                property information, increase listing exposure, and provide our 
+                clients with the benefits of professional cooperation throughout 
+                the real estate process.
+            </p>
         </div>
     </dialog>
 
@@ -99,7 +162,7 @@
                 </a>
             </div>
 
-            <div class="button-real-estate-logos">
+            <button class="button-real-estate-logos" onclick="showIconsModal()">
                 <div>
                     <img src="icons/Equal Housing Opportunity Black.png" alt="Equal Housing Opportunity" class="real-estate-logos">
                 </div>
@@ -113,7 +176,7 @@
                     <img src="icons/MLS Logo Black.png" alt="MLS" class="real-estate-logos">
                 </div>
                 
-            </div>
+            </button>
 
             
 
@@ -128,17 +191,44 @@
 
 
     <script>
-        const dialog01 = document.getElementById("bonafide-modal")
-        const wrapper = document.querySelector(".wrapper")
-        function showBonafideModal(){
-            dialog01.showModal()
+        const dialog01 = document.getElementById("bonafide-modal");
+        const dialog02 = document.getElementById("icons-modal");
+
+        const wrapper01 = dialog01.querySelector(".wrapper");
+        const wrapper02 = dialog02.querySelector(".wrapper");
+
+
+        function showBonafideModal() {
+            dialog01.showModal();
         }
 
-        dialog01.addEventListener('click', (e) => {
-            if(!wrapper.contains(e.target)){
-                dialog01.close()
+
+        dialog01.addEventListener("click", (event) => {
+
+            if (!wrapper01.contains(event.target)) {
+                dialog01.close();
             }
-        })
+
+        });
+
+
+        // ========================================
+        // ICONS MODAL
+        // ========================================
+
+        function showIconsModal() {
+            dialog02.showModal();
+        }
+
+
+        dialog02.addEventListener("click", (event) => {
+
+            if (!wrapper02.contains(event.target)) {
+                dialog02.close();
+            }
+
+        });
+
     </script>
 
     <div>

@@ -144,6 +144,34 @@
     pointer-events: none;
 }
 
+/* ========================================
+   LISTING STATUS
+   ======================================== */
+
+.listing-status {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 3;
+
+    padding: 0.45rem 0.8rem;
+
+    border-radius: 0.5rem;
+
+    background: rgba(29, 39, 51, 0.9);
+    color: white;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(4px);
+}
+
 
 /* ========================================
    CARD INFORMATION
@@ -276,7 +304,7 @@
 .listing-address {
     color: #222;
 
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 500;
 
     line-height: 1.35;
@@ -288,6 +316,60 @@
     word-break: normal;
 }
 
+
+.listing-card-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+}
+
+.listing-card-info-wrapper .listing-card-info {
+    flex: 1;
+}
+
+.send-listing-link {
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1rem;
+    padding: 0.7rem 1rem;
+
+    border: none;
+    border-radius: 0.6rem;
+
+    background: #1d2733;
+    color: white;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.send-listing-link:hover {
+    background: #2d3b4a;
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.send-listing-link:active {
+    transform: translateY(0);
+}
+
+.listing-days-on-market {
+    width: 100%;
+    margin-top: 1rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    text-align: center;
+
+}
 
 /* ========================================
    MODAL IMAGE CAROUSEL
@@ -385,6 +467,49 @@
 }
 
 /* ========================================
+   MODAL SEND LINK
+   ======================================== */
+
+.modal-share-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0.75rem 1rem 1.25rem;
+    box-sizing: border-box;
+}
+
+.modal-send-listing-link {
+    width: min(100%, 20rem);
+    padding: 0.75rem 1.25rem;
+
+    border: none;
+    border-radius: 0.6rem;
+
+    background: #1d2733;
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.modal-send-listing-link:hover {
+    background: #2d3b4a;
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.modal-send-listing-link:active {
+    transform: translateY(0);
+}
+
+/* ========================================
    LISTING MODAL
    ======================================== */
 
@@ -462,7 +587,7 @@ dialog::backdrop {
 
     color: #1d2733;
 
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.2;
 
@@ -476,7 +601,7 @@ dialog::backdrop {
 
     color: #1d2733;
 
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -533,23 +658,22 @@ dialog::backdrop {
     align-items: center;
     justify-content: center;
 
-    width: 3.25rem;
-    height: 3.25rem;
+    width: 4rem;
+    height: 4rem;
 
     padding: 0;
 
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.0);
     border-radius: 50%;
 
-    background: rgba(20, 25, 30, 0.65);
+    background: none;
     color: white;
 
-    font-size: 1.8rem;
+    font-size: 3.2rem;
     line-height: 1;
 
     cursor: pointer;
 
-    backdrop-filter: blur(5px);
 
     transition:
         background 0.2s ease,
@@ -557,7 +681,10 @@ dialog::backdrop {
 }
 
 .modal-image-arrow:hover {
-    background: rgba(20, 25, 30, 0.9);
+    background: rgba(20, 25, 30, 0.2);
+
+    backdrop-filter: blur(5px);
+
 
     transform: translateY(-50%) scale(1.05);
 }
@@ -614,7 +741,7 @@ dialog::backdrop {
 
     color: #1d2733;
 
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
@@ -690,6 +817,31 @@ dialog::backdrop {
     transform: translateY(-1px);
 }
 
+.school-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.school-site-link {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 0.4rem;
+    background: #1d2733;
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.school-site-link:hover {
+    background: #2d3b4a;
+    transform: translateY(-1px);
+}
+
 
 /* ========================================
    TABLET
@@ -715,7 +867,7 @@ dialog::backdrop {
     }
 
     .modal-price {
-        font-size: 1.35rem;
+        font-size: 2rem;
     }
 
     .modal-listing-image {
@@ -740,7 +892,7 @@ dialog::backdrop {
    PHONE
    ======================================== */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
 
     dialog {
         position: fixed;
@@ -771,7 +923,7 @@ dialog::backdrop {
     }
 
     .modal-price {
-        font-size: 1.35rem;
+        font-size: 2.1rem;
     }
 
     .modal-listing-image {
@@ -779,10 +931,10 @@ dialog::backdrop {
     }
 
     .modal-image-arrow {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 4rem;
+        height: 4rem;
 
-        font-size: 1.4rem;
+        font-size: 2.7rem;
     }
 
     .modal-image-arrow-left {
@@ -808,7 +960,7 @@ dialog::backdrop {
     .modal-section h3 {
         margin-bottom: 1rem;
 
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     .modal-section p {

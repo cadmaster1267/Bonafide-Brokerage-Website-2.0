@@ -26,8 +26,25 @@ fetch("listings.json")
         feature => feature.headerCommunity
       );
 
+      const schools = listing.features.find(
+        feature => feature.headerSchools
+      );
+
       const financial = listing.features.find(
         feature => feature.headerFinancial
+      );
+
+      // ========================================
+      // CALCULATE DAYS ON MARKET
+      // ========================================
+
+      const dateOnMarket = new Date(financial.dateOnMarket);
+      const today = new Date();
+
+      const millisecondsPerDay = 1000 * 60 * 60 * 24;
+
+      const daysOnMarket = Math.floor(
+        (today - dateOnMarket) / millisecondsPerDay
       );
 
 
@@ -51,56 +68,96 @@ fetch("listings.json")
 
           <div class="listing-card-images-area">
 
+            <div class="listing-status">
+                ${financial.listingStatus}
+            </div>
+
             <img
-              src="${listing.images[0]}"
-              alt="${listing.address}"
-              class="listing-images"
+                src="${listing.images[0]}"
+                alt="${listing.address}"
+                class="listing-images"
             >
 
           </div>
 
 
-          <button
-            class="listing-card-info"
-            data-open-modal="${modalID}"
-            type="button"
-          >
+          <div class="listing-card-info-wrapper">
 
-            <div class="listing-price">
-              $${listing.price.toLocaleString()}
-            </div>
+              <button
+                  class="listing-card-info"
+                  data-open-modal="${modalID}"
+                  type="button"
+              >
+                  <div class="listing-price">
+                      $${listing.price.toLocaleString()}
+                  </div>
 
-            <div class="listing-details">
+                  <div class="listing-details">
+                      <span>${interior.bedrooms} Beds</span>
+                      <span>${interior.fullBaths + (interior.halfBaths * 0.5)} Baths</span>
+                      <span>${property.squareFootage.toLocaleString()} Sq Ft</span>
+                  </div>
 
-              <span>
-                ${interior.bedrooms} Beds
-              </span>
+                  <div class="listing-property-type">
+                      ${listing.propertyType}
+                  </div>
 
-              <span>
-                ${interior.fullBaths + (interior.halfBaths * 0.5)} Baths
-              </span>
+                  <div class="listing-address">
+                      ${listing.address}
+                  </div>
 
-              <span>
-                ${property.squareFootage.toLocaleString()} Sq Ft
-              </span>
+                  <div class="listing-days-on-market">
+                      Listed ${daysOnMarket === 0 
+                        ? "today" 
+                        : `${daysOnMarket} ${daysOnMarket === 1 ? "day" : "days"} ago`}
+                  </div>
+              </button>
 
-            </div>
+              <button
+                  class="send-listing-link"
+                  type="button"
+                  data-listing-id="${listing.listingID}"
+              >
+                  🔗 Send Link
+              </button>
 
-            <div class="listing-property-type">
-              ${listing.propertyType}
-            </div>
-
-            <div class="listing-address">
-              ${listing.address}
-            </div>
-
-          </button>
+          </div>
 
         </div>
       `;
 
 
       container.appendChild(card);
+
+      const sendLinkButton = card.querySelector(".send-listing-link");
+
+      sendLinkButton.addEventListener("click", async (event) => {
+          event.stopPropagation();
+
+          const listingURL =
+              `${window.location.origin}${window.location.pathname}?listing=${listing.listingID}`;
+
+          try {
+              await navigator.clipboard.writeText(listingURL);
+
+              const originalText = sendLinkButton.textContent;
+
+              sendLinkButton.textContent = "✓ Link Copied";
+
+              setTimeout(() => {
+                  sendLinkButton.textContent = originalText;
+              }, 2000);
+
+          } catch (error) {
+              console.error("Could not copy listing link:", error);
+
+              // Fallback
+              window.prompt(
+                  "Copy this listing link:",
+                  listingURL
+              );
+          }
+      });
 
 
       // ========================================
@@ -179,6 +236,18 @@ fetch("listings.json")
             ${listing.images.length}
           </div>
 
+          <div class="modal-share-container">
+
+            <button
+              class="modal-send-listing-link"
+              type="button"
+              data-listing-id="${listing.listingID}"
+            >
+              🔗 Send Link
+            </button>
+
+          </div>
+
 
           <!-- ================================= -->
           <!-- DESCRIPTION -->
@@ -192,6 +261,11 @@ fetch("listings.json")
 
             <p>
               ${listing.descriptionShort}
+            </p>
+
+            <p>
+              <strong>Open House:</strong>
+              ${listing.openHouse}
             </p>
 
           </section>
@@ -208,18 +282,13 @@ fetch("listings.json")
             </h3>
 
             <p>
-              <strong>Listing ID:</strong>
-              ${listing.listingID}
-            </p>
-
-            <p>
               <strong>MLS Number:</strong>
               ${listing.listingNumberMLS}
             </p>
 
             <p>
               <strong>Property Type:</strong>
-              ${listing.propertyType}
+              ${listing.commercialORresidential} ${listing.propertyType}
             </p>
 
             <p>
@@ -323,6 +392,16 @@ fetch("listings.json")
               ${property.roof}
             </p>
 
+            <p>
+              <strong>Pool:</strong>
+              ${property.pool ? "Yes" : "No"}
+            </p>
+
+            <p>
+              <strong>RV Parking:</strong>
+              ${property.rvParking ? "Yes" : "No"}
+            </p>
+
           </section>
 
 
@@ -366,6 +445,11 @@ fetch("listings.json")
               ${utilities.energyStarRating}
             </p>
 
+            <p>
+              <strong>Potable Water:</strong>
+              ${utilities.water}
+            </p>
+
           </section>
 
 
@@ -393,6 +477,71 @@ fetch("listings.json")
               <strong>Region:</strong>
               ${community.region}
             </p>
+
+          </section>
+
+
+          <!-- ================================= -->
+          <!-- SCHOOL ZONES -->
+          <!-- ================================= -->
+
+          <section class="modal-section">
+
+              <h3>
+                  ${schools.headerSchools}
+              </h3>
+
+              <div class="school-row">
+                  <strong>School District:</strong>
+                  ${schools.schoolDistrict}
+                  <a
+                      href="${schools.schoolDistrictSite}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="school-site-link"
+                  >
+                      Visit Site
+                  </a>
+              </div>
+
+              <div class="school-row">
+                  <strong>Elementary School:</strong>
+                  ${schools.elememtarySchool}
+                  <a
+                      href="${schools.elememtarySchoolSite}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="school-site-link"
+                  >
+                      Visit Site
+                  </a>
+              </div>
+
+              <div class="school-row">
+                  <strong>Middle School:</strong>
+                  ${schools.middleSchool}
+                  <a
+                      href="${schools.middleSchoolSite}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="school-site-link"
+                  >
+                      Visit Site
+                  </a>
+              </div>
+
+              <div class="school-row">
+                  <strong>High School:</strong>
+                  ${schools.highSchool}
+                  <a
+                      href="${schools.highSchoolSite}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="school-site-link"
+                  >
+                      Visit Site
+                  </a>
+              </div>
 
           </section>
 
@@ -448,6 +597,52 @@ fetch("listings.json")
 
       document.body.appendChild(modal);
 
+      // ========================================
+      // MODAL SEND LINK
+      // ========================================
+
+      const modalSendLinkButton =
+        modal.querySelector(".modal-send-listing-link");
+
+      modalSendLinkButton.addEventListener("click", async (event) => {
+
+        event.stopPropagation();
+
+        const listingURL =
+          `${window.location.origin}${window.location.pathname}?listing=${listing.listingID}`;
+
+        try {
+
+          await navigator.clipboard.writeText(listingURL);
+
+          const originalText =
+            modalSendLinkButton.textContent;
+
+          modalSendLinkButton.textContent =
+            "✓ Link Copied";
+
+          setTimeout(() => {
+
+            modalSendLinkButton.textContent =
+              originalText;
+
+          }, 2000);
+
+        } catch (error) {
+
+          console.error(
+            "Could not copy listing link:",
+            error
+          );
+
+          window.prompt(
+            "Copy this listing link:",
+            listingURL
+          );
+
+        }
+
+      });
 
       // ========================================
       // MODAL IMAGE CAROUSEL
@@ -571,9 +766,49 @@ fetch("listings.json")
 
       });
 
-    });
+    }); // END data.forEach
 
-  })
+          // ========================================
+          // OPEN MODAL FROM URL
+          // ========================================
+
+          const urlParams = new URLSearchParams(window.location.search);
+          const sharedListingID = urlParams.get("listing");
+
+          if (sharedListingID) {
+
+            const targetModal = document.querySelector(
+              `[data-modal="listing-${sharedListingID}"]`
+            );
+
+            if (targetModal) {
+
+              // Find the listing's first image
+              const targetImageContainer =
+                targetModal.querySelector(".modal-image-container");
+
+              const targetCurrentImage =
+                targetModal.querySelector(".current-image");
+
+              if (targetImageContainer && targetCurrentImage) {
+
+                targetImageContainer.scrollTo({
+                  left: 0,
+                  behavior: "instant"
+                });
+
+                targetCurrentImage.textContent = "1";
+
+              }
+
+              targetModal.showModal();
+
+            }
+
+          }
+
+    })
+
   .catch(error => {
 
     console.error(

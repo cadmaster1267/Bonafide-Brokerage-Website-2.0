@@ -1,208 +1,1027 @@
 
+/* ========================================
+   LISTINGS PAGE HEADER
+   ======================================== */
+
 .page-header-listings {
     display: flex;
-    height: auto;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
     padding: 5rem 4rem 2rem;
 }
 
 .listings-title {
     display: flex;
-    height: 10rem;
-    width: 70rem;
-    background-color: rgba(255, 255, 255, 0.904);
-    border-radius: var(--home-bento-corner);
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    width: 70rem;
+    height: 10rem;
+
+    background-color: rgba(255, 255, 255, 0.904);
+
+    border-radius: var(--home-bento-corner);
+
     font-size: 4rem;
 }
 
 
+/* ========================================
+   LISTINGS CONTAINER
+   ======================================== */
+
+.ls-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 2rem;
+
+    width: min(90vw, 120rem);
+
+    margin: 3rem auto 8rem;
+}
 
 
+/* ========================================
+   LISTING CARD
+   ======================================== */
+
+.listing-card {
+    width: 22rem;
+    min-width: 22rem;
+}
 
 
-
-
-
-
-
+/* ========================================
+   CARD CONTAINER
+   ======================================== */
 
 .ls-bio {
     display: grid;
-    grid-template-rows: 65% auto;
-    place-items: center;
-    background: linear-gradient(
-        180deg,
-        rgb(255, 230, 245),
-        rgba(255, 255, 255, 0.3)
-    );
-    grid-area: intro;
-    box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
-    border: none;
-    font-size: 1.5rem;
-    border-radius: var(--home-bento-corner);
-    width: 22rem;
-    height: 25rem;
-    overflow: hidden;
-}
+    grid-template-rows: 14rem auto;
 
-.ls-main {
-    margin: 3rem auto 8rem;
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: min(80vw, 200rem)
-}
-
-.listing-images {
-    flex: 0 0 100%;
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    scroll-snap-align: start;
+    min-height: 25rem;
+
+    overflow: hidden;
+
+    background: white;
+
+    border-radius: 1rem;
+
+    box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
+
+/* Card hover */
+
+.ls-bio:hover {
+    transform: translateY(-0.4rem);
+
+    box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* ========================================
+   CARD IMAGE
+   ======================================== */
 
 .listing-card-images-area {
     position: relative;
+
     width: 100%;
-    height: 250px;
+    height: 14rem;
+
     overflow: hidden;
+
+    background: #e9e9e9;
 }
 
-.listing-images-container {
-    display: flex;
+
+.listing-images {
+    display: block;
+
     width: 100%;
     height: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
 }
 
-.listing-images-container::-webkit-scrollbar {
-    display: none;
+
+/* Image hover */
+
+.ls-bio:hover .listing-images {
+    transform: scale(1.04);
 }
 
+
+/* Image gradient */
+
+.listing-card-images-area::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 5rem;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.45)
+    );
+
+    pointer-events: none;
+}
+
+
+/* ========================================
+   CARD INFORMATION
+   ======================================== */
 
 .listing-card-info {
-    display: grid;
-    background-color: rgb(250, 250, 250);
-    height: 100%;
-    width: 100%;
-    border-radius: .2rem .2rem var(--home-bento-corner) var(--home-bento-corner);
-    place-items: center;
-    box-shadow: 0 0 .8rem .3rem rgba(0, 0, 0, .3);
-    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+
+    padding: 1rem;
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 0;
+
+    background: white;
+
+    color: inherit;
+
+    text-align: left;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+
+
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 
+.listing-card-info:hover {
+    background: #fafafa;
+}
 
 
+/* ========================================
+   PRICE
+   ======================================== */
+
+.listing-price {
+    margin-bottom: 0.65rem;
+
+    font-size: 1.65rem;
+    font-weight: 700;
+
+    line-height: 1.1;
+    
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+}
 
 
+/* ========================================
+   BED / BATH / SQ FT
+   ======================================== */
 
-.image-arrow {
+.listing-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+
+    margin-bottom: 0.8rem;
+
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 500;
+
+    width: 100%;
+    min-width: 0;
+
+    line-height: 1.4;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+
+.listing-details span {
+    white-space: normal;
+    min-width: 0;
+}
+
+
+.listing-details span:not(:last-child)::after {
+    content: "•";
+    margin-left: 0.25rem;
+    color: #aaa;
+}
+
+
+/* ========================================
+   PROPERTY TYPE
+   ======================================== */
+
+.listing-property-type {
+    margin-bottom: 0.35rem;
+
+    color: #777;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+}
+
+
+/* ========================================
+   ADDRESS
+   ======================================== */
+
+.listing-address {
+    color: #222;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.35;
+
+
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+
+/* ========================================
+   MODAL IMAGE CAROUSEL
+   ======================================== */
+
+.modal-image-carousel {
+    position: relative;
+
+    width: 100%;
+    max-width: 60rem;
+
+    margin: 0 auto;
+}
+
+
+.modal-image-container {
+    display: flex;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    scroll-behavior: smooth;
+}
+
+
+.modal-listing-image {
+    flex: 0 0 100%;
+
+    width: 100%;
+    height: 30rem;
+
+    object-fit: cover;
+}
+
+
+/* ========================================
+   MODAL ARROWS
+   ======================================== */
+
+.modal-image-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
 
-    width: 40px;
-    height: 40px;
+    top: 50%;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 3rem;
+    height: 3rem;
 
     border: none;
     border-radius: 50%;
 
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.6);
+
     color: white;
 
-    font-size: 24px;
+    font-size: 2rem;
+
     cursor: pointer;
+}
+
+
+.modal-image-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+
+.modal-image-arrow-left {
+    left: 1rem;
+}
+
+
+.modal-image-arrow-right {
+    right: 1rem;
+}
+
+
+/* ========================================
+   MODAL IMAGE COUNTER
+   ======================================== */
+
+.modal-image-counter {
+    margin: 0.75rem 0 1.5rem;
+
+    text-align: center;
+
+    font-size: 1rem;
+}
+
+/* ========================================
+   LISTING MODAL
+   ======================================== */
+
+dialog {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(90vw, 70rem);
+    max-width: 70rem;
+    max-height: 90vh;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 1.25rem;
+
+    background: transparent;
+
+    box-shadow:
+        0 1.5rem 5rem rgba(0, 0, 0, 0.35);
+
+    overflow: hidden;
+}
+
+/* Dark background behind modal */
+dialog::backdrop {
+    background: rgba(10, 18, 30, 0.72);
+    backdrop-filter: blur(5px);
+}
+
+
+/* ========================================
+   MODAL CONTENT
+   ======================================== */
+
+.listing-modal {
+    width: 100%;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-family: inherit;
+}
+
+
+/* ========================================
+   MODAL HEADER
+   ======================================== */
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    padding: 1.75rem 2rem;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.modal-header h2 {
+    margin: 0;
+
+    color: #1d2733;
+
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+
+    overflow-wrap: break-word;
+}
+
+.modal-price {
+    flex-shrink: 0;
+
+    margin: 0;
+
+    color: #1d2733;
+
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* ========================================
+   MODAL IMAGE CAROUSEL
+   ======================================== */
+
+.modal-image-carousel {
+    position: relative;
+
+    width: 100%;
+
+    background: #111;
+}
+
+.modal-image-container {
+    display: flex;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    scroll-behavior: smooth;
+
+    background: #111;
+}
+
+.modal-listing-image {
+    flex: 0 0 100%;
+
+    width: 100%;
+    height: 32rem;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ========================================
+   MODAL ARROWS
+   ======================================== */
+
+.modal-image-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    transform: translateY(-50%);
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    width: 3.25rem;
+    height: 3.25rem;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(20, 25, 30, 0.65);
+    color: white;
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
 }
 
-.image-arrow:hover {
-    background: rgba(0, 0, 0, 0.8);
+.modal-image-arrow:hover {
+    background: rgba(20, 25, 30, 0.9);
+
+    transform: translateY(-50%) scale(1.05);
 }
 
-.image-arrow-left {
-    left: 10px;
+.modal-image-arrow-left {
+    left: 1.25rem;
 }
 
-.image-arrow-right {
-    right: 10px;
+.modal-image-arrow-right {
+    right: 1.25rem;
 }
 
 
+/* ========================================
+   IMAGE COUNTER
+   ======================================== */
+
+.modal-image-counter {
+    margin: 0;
+
+    padding: 0.75rem;
+
+    background: #f5f6f7;
+
+    color: #666;
+
+    text-align: center;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    border-bottom: 1px solid #e5e5e5;
+}
 
 
+/* ========================================
+   MODAL SECTIONS
+   ======================================== */
+
+.modal-section {
+    margin: 0 2rem;
+
+    padding: 1.75rem 0;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-section:last-of-type {
+    border-bottom: none;
+}
+
+.modal-section h3 {
+    margin: 0 0 1.25rem;
+
+    color: #1d2733;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.modal-section p {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.35rem;
+
+    margin: 0.65rem 0;
+
+    color: #555;
+
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.modal-section p strong {
+    color: #222;
+
+    font-weight: 600;
+}
 
 
+/* ========================================
+   DESCRIPTION
+   ======================================== */
+
+.modal-section:first-of-type p {
+    display: block;
+
+    color: #555;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
 
 
+/* ========================================
+   CLOSE BUTTON
+   ======================================== */
+
+.listing-modal > button[data-close-modal] {
+    display: block;
+
+    width: calc(100% - 4rem);
+
+    margin: 1.5rem 2rem 2rem;
+
+    padding: 0.9rem 1.5rem;
+
+    border: none;
+    border-radius: 0.65rem;
+
+    background: #1d2733;
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.listing-modal > button[data-close-modal]:hover {
+    background: #303d4d;
+
+    transform: translateY(-1px);
+}
 
 
-
-
-
-
-
-
-
-
+/* ========================================
+   TABLET
+   ======================================== */
 
 @media screen and (max-width: 1000px) {
-    .page-header-listings { 
-        padding: 2rem 4rem .5rem;
+
+    dialog {
+        width: 92vw;
+        max-height: 92vh;
+
+        border-radius: 1rem;
     }
 
+    .modal-header {
+        padding: 1.25rem 1.5rem;
+
+        gap: 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-price {
+        font-size: 1.35rem;
+    }
+
+    .modal-listing-image {
+        height: 24rem;
+    }
+
+    .modal-section {
+        margin: 0 1.5rem;
+
+        padding: 1.4rem 0;
+    }
+
+    .listing-modal > button[data-close-modal] {
+        width: calc(100% - 3rem);
+
+        margin: 1.25rem 1.5rem 1.5rem;
+    }
+}
+
+
+/* ========================================
+   PHONE
+   ======================================== */
+
+@media screen and (max-width: 600px) {
+
+    dialog {
+        position: fixed;
+
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+
+        width: 94vw;
+        max-height: 94vh;
+
+        margin: 0;
+
+        border-radius: 0.9rem;
+    }
+
+    .modal-header {
+        display: block;
+
+        padding: 1.25rem;
+    }
+
+    .modal-header h2 {
+        margin-bottom: 0.5rem;
+
+        font-size: 1.35rem;
+    }
+
+    .modal-price {
+        font-size: 1.35rem;
+    }
+
+    .modal-listing-image {
+        height: 16rem;
+    }
+
+    .modal-image-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+
+        font-size: 1.4rem;
+    }
+
+    .modal-image-arrow-left {
+        left: 0.75rem;
+    }
+
+    .modal-image-arrow-right {
+        right: 0.75rem;
+    }
+
+    .modal-image-counter {
+        padding: 0.6rem;
+
+        font-size: 0.85rem;
+    }
+
+    .modal-section {
+        margin: 0 1.25rem;
+
+        padding: 1.25rem 0;
+    }
+
+    .modal-section h3 {
+        margin-bottom: 1rem;
+
+        font-size: 1.1rem;
+    }
+
+    .modal-section p {
+        font-size: 0.95rem;
+    }
+
+    .modal-section:first-of-type p {
+        font-size: 1rem;
+    }
+
+    .listing-modal > button[data-close-modal] {
+        width: calc(100% - 2.5rem);
+
+        margin: 1.25rem 1.25rem 1.25rem;
+
+        padding: 0.85rem;
+    }
+}
+
+/* ========================================
+   TABLET / MOBILE
+   ======================================== */
+
+@media screen and (max-width: 1000px) {
+
+    .page-header-listings {
+        padding: 2rem 4rem 0.5rem;
+    }
+
+
     .listings-title {
-        height: 4rem;
         width: 40rem;
         max-width: 60vw;
+        height: 4rem;
+
         border-radius: var(--mobile-bento-corner);
+
         font-size: 2rem;
     }
 
 
+    .ls-main {
+        width: 90vw;
+
+        gap: 1rem;
+
+        margin: 3rem auto 8rem;
+    }
 
 
-
-
-
+    .listing-card {
+        width: 15rem;
+        min-width: 15rem;
+    }
 
 
     .ls-bio {
-        place-items: center;
+        grid-template-rows: 10rem auto;
+
+        min-height: 20rem;
+
         border-radius: var(--mobile-bento-corner);
-        width: 15rem;
-        height: 20rem;
-        max-width: 80vw;
     }
 
-    .ls-main {
-        margin: 3rem auto 8rem;
-        display: flex;
-        gap: .5rem;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: min(80vw, 200rem)
+
+    .listing-card-images-area {
+        height: 10rem;
     }
+
 
     .listing-card-info {
-        border-radius: 0.15rem 0.15rem var(--mobile-bento-corner) var(--mobile-bento-corner);
+        padding: 1rem;
+    }
+
+
+    .listing-price {
+        font-size: 1.35rem;
+    }
+
+
+    .listing-details {
+        gap: 0.4rem;
+
+        font-size: 0.8rem;
+    }
+
+
+    .listing-details span:not(:last-child)::after {
+        margin-left: 0.4rem;
+    }
+
+
+    .listing-property-type {
+        font-size: 0.75rem;
+    }
+
+
+    .listing-address {
+        font-size: 0.9rem;
+    }
+
+
+    .modal-listing-image {
+        height: 20rem;
+    }
+
+}
+
+
+/* ========================================
+   SMALL PHONES
+   ======================================== */
+
+@media (max-width: 1000px) {
+
+    .ls-main {
+        width: 92vw;
+        margin: 2rem auto 5rem;
+        gap: 1.5rem;
+    }
+
+    .listing-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .ls-bio {
+        width: 100%;
+        min-height: 0;
+        height: auto;
+
+        grid-template-rows: 12rem auto;
+
+        border-radius: 1rem;
+    }
+
+    /* Property image */
+    .listing-card-images-area {
+        width: 100%;
+        height: 12rem;
+    }
+
+    .listing-images {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Property information */
+    .listing-card-info {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+
+        padding: 1rem 1.25rem;
+
+        box-sizing: border-box;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .listing-price {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 0.4rem;
+    }
+
+    .listing-details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        width: 100%;
+        min-width: 0;
+
+        gap: 0.25rem;
+
+        font-size: 1rem;
+        line-height: 1.4;
+
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: normal;
 
     }
 
-    
+    .listing-details span {
+        white-space: normal;
+        min-width: 0;
+    }
+
+    .listing-details span:not(:last-child)::after {
+        margin-left: 0.25rem;
+    }
+
+    .listing-property-type {
+        font-size: 0.95rem;
+        line-height: 1.3;
+        margin-top: 0.25rem;
+    }
+
+    .listing-address {
+        width: 100%;
+        min-width: 0;
+
+        font-size: 1rem;
+        line-height: 1.4;
+
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
 }

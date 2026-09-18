@@ -220,6 +220,12 @@ footer {
     margin-left: -1px;
 }
 
+.real-estate-logos-modal {
+    height: min(6rem, 10vh);
+    filter: invert(0%);
+    margin-left: -1px;
+}
+
 .button-real-estate-logos {
     display: flex;
     justify-content: center;
@@ -276,6 +282,7 @@ footer {
     max-width: 80vw;
     width: 70rem;
     max-height: 70vh;
+    scrollbar-width: none;
 }
 
 .wrapper {
@@ -284,6 +291,22 @@ footer {
 
 .wrapperItems {
     padding: 1rem;
+}
+
+.wrapper02 {
+    padding: 2rem;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.wrapper02Items {
+    padding: .25rem;
+
+}
+
+.wrapper02gridArea {
+    padding: 1.25rem
 }
 
 dialog::backdrop {
@@ -445,8 +468,20 @@ page-link {
         font-size: .8rem;
     }
 
+    .wrapper02Items {
+        padding: .5rem;
+    }
+
+    .wrapper02 h2 {
+        font-size: 1.2rem;
+    }
+
+    .wrapper02 p {
+        font-size: .8rem;
+    }
+
     .header-icon {
-    width: min(6rem, 12vw);
+    width: min(4.5rem, 12vw);
 }
 
 }

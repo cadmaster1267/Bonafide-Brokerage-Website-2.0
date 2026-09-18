@@ -44,50 +44,88 @@
     </dialog>
 
     <dialog id="icons-modal" class="modal-content">
-        <div class="wrapper">
-            <h2 class="wrapperItems">Better Business Bureau</h2>
+        <div class="wrapper02">
+            <div class="wrapper02gridArea" style="grid-area: 1 / 1;">
+                <a href="https://www.bbb.org/us/nv/north-las-vegas/profile/real-estate/bonafide-brokerage-1086-90095770/#sealclick" target="_blank" rel="nofollow">
+                    <img src="icons/Accredited_Business_Seal_Rating_Grayscale.png" alt="Bonafide Brokerage   BBB Business Review" class="real-estate-logos-modal">
+                </a>
+            </div>
+            <div class="wrapper02gridArea" style="grid-area: 1 / 2;">
+                <h2 class="wrapper02Items">Better Business Bureau</h2>
 
-            <p class="wrapperItems">
-                Bonafide Brokerage proudly operates in accordance with 
-                Equal Housing Opportunity principles, ensuring every client is 
-                treated with fairness, respect, and professionalism. We are 
-                committed to providing equal access to housing opportunities and 
-                guiding every client through their real estate journey with 
-                integrity and confidence.
-            </p>
+                <p class="wrapper02Items">
+                    Bonafide Brokerage is honored to be an accredited 
+                    member of the Better Business Bureau with an A+ Rating. 
+                    This recognition reflects our dedication to conducting 
+                    business with honesty, professionalism, transparency, and a 
+                    strong commitment to our clients. We understand that successful 
+                    real estate relationships are built on trust, communication, and 
+                    accountability, and we work hard to earn that trust from the first 
+                    conversation through the completion of every transaction. Our BBB 
+                    accreditation and A+ Rating reinforce the high standards we strive 
+                    to maintain as we help our clients make important real estate decisions 
+                    and move confidently into their next chapter.
+                </p>
 
-            <h2 class="wrapperItems">Equal Housing Opportunity</h2>
+                <p class="wrapper02Items">
+                    Click the icon to the left for proof of our rating status.
+                </p>
+            </div>
 
-            <p class="wrapperItems">
-                Bonafide Brokerage proudly operates in accordance with 
-                Equal Housing Opportunity principles, ensuring every client is 
-                treated with fairness, respect, and professionalism. We are 
-                committed to providing equal access to housing opportunities and 
-                guiding every client through their real estate journey with 
-                integrity and confidence.
-            </p>
+            <div class="wrapper02gridArea" style="grid-area: 2 / 1;">
+                <img src="icons/Equal Housing Opportunity Black.png" alt="Equal Housing Opportunity" class="real-estate-logos-modal">
+            </div>
 
-            <h2 class="wrapperItems">Realtor.com®</h2>
+            <div class="wrapper02gridArea" style="grid-area: 2 / 2;">
+                <h2 class="wrapper02Items">Equal Housing Opportunity</h2>
 
-            <p class="wrapperItems">
-                Bonafide Brokerage participates in the Realtor.com® 
-                real estate marketplace, giving our listings valuable 
-                exposure to consumers actively searching for properties. 
-                This platform helps us connect buyers and sellers while 
-                providing our clients with another powerful resource for 
-                navigating today’s real estate market.
-            </p>
+                <p class="wrapper02Items">
+                    Bonafide Brokerage proudly aligns its business practices 
+                    with the standards and principles established through Equal 
+                    Housing Opportunity. We believe every client deserves to be 
+                    treated fairly, respectfully, and professionally throughout 
+                    their real estate experience. By following these standards, 
+                    we are committed to providing equal opportunity in housing 
+                    and maintaining a consistent level of integrity and service 
+                    for every buyer, seller, and family we have the privilege of 
+                    serving.
+                </p>
+            </div>
 
-            <h2 class="wrapperItems">Multiple Listing Service (MLS)</h2>
+            <div class="wrapper02gridArea" style="grid-area: 3 / 1;">
+                <img src="icons/Realtor Logo Orig.png" alt="Board of Realtors" class="real-estate-logos">
+            </div>
 
-            <p class="wrapperItems">
-                Bonafide Brokerage participates in the Multiple Listing Service 
-                (MLS), connecting us with a professional network of real estate 
-                agents and brokers. This allows us to share and access current 
-                property information, increase listing exposure, and provide our 
-                clients with the benefits of professional cooperation throughout 
-                the real estate process.
-            </p>
+            <div class="wrapper02gridArea" style="grid-area: 3 / 2;">
+                <h2 class="wrapper02Items">Realtor.com®</h2>
+
+                <p class="wrapper02Items">
+                    Bonafide Brokerage utilizes Realtor.com® to help bring 
+                    our property listings to buyers actively searching for 
+                    their next home. By maintaining a presence on this widely 
+                    recognized real estate marketplace, we can expand the reach 
+                    of our listings and help connect our sellers with potential 
+                    buyers while giving our clients an additional resource 
+                    throughout the real estate process.
+                </p>
+            </div>
+
+            <div class="wrapper02gridArea" style="grid-area: 4 / 1;">
+                <img src="icons/MLS Logo Black.png" alt="MLS" class="real-estate-logos">
+            </div>
+
+            <div class="wrapper02gridArea" style="grid-area: 4 / 2;">
+                <h2 class="wrapper02Items">Multiple Listing Service (MLS)</h2>
+
+                <p class="wrapper02Items">
+                    Through our participation in the Multiple Listing Service (MLS), 
+                    Bonafide Brokerage is connected to a broad network of real estate 
+                    professionals. This professional network allows us to share and 
+                    access current property information, provide greater visibility 
+                    for our listings, and work collaboratively with other agents 
+                    and brokers to better serve our buyers and sellers.
+                </p>
+            </div>
         </div>
     </dialog>
 
@@ -198,7 +236,7 @@
         const dialog02 = document.getElementById("icons-modal");
 
         const wrapper01 = dialog01.querySelector(".wrapper");
-        const wrapper02 = dialog02.querySelector(".wrapper");
+        const wrapper02 = dialog02.querySelector(".wrapper02");
 
 
         function showBonafideModal() {

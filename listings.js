@@ -118,7 +118,7 @@ fetch("listings.json")
                   type="button"
                   data-listing-id="${listing.listingID}"
               >
-                  🔗 Send Link
+                  Copy Link
               </button>
 
           </div>
@@ -238,13 +238,38 @@ fetch("listings.json")
 
           <div class="modal-share-container">
 
-            <button
-              class="modal-send-listing-link"
-              type="button"
-              data-listing-id="${listing.listingID}"
-            >
-              🔗 Send Link
-            </button>
+              <button
+                class="modal-send-listing-link"
+                type="button"
+                data-listing-id="${listing.listingID}"
+              >
+                Copy Link
+              </button>
+
+              <a
+                class="modal-email-listing"
+                href="mailto:joan.bonafide@gmail.com?subject=${encodeURIComponent(
+                  `Inquiry About ${listing.address}`
+                )}&body=${encodeURIComponent(
+                  `Hello,
+
+          I am interested in this property:
+
+          Address: ${listing.address}
+          Listing ID: ${listing.listingID}
+          MLS Number: ${listing.listingNumberMLS}
+          Price: $${listing.price.toLocaleString()}
+
+          Please fill out the information below to allow us to better help you:
+
+          Name:
+          Phone#:
+
+          Thank you.`
+                )}"
+              >
+                ✉ Email About This Listing
+              </a>
 
           </div>
 

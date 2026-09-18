@@ -47,10 +47,12 @@ header {
     background-color: var(--bonafide-tan);
     box-shadow: 0px 4px 5px rgb(17, 17, 17);
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     height: 20rem;
     max-height: 40vh;
     overflow: hidden;
+    grid-template-columns: 20vw 60vw 20vw;
+    grid-template-rows: auto;
 
 }
 
@@ -82,14 +84,17 @@ footer {
 }
 
 .header-logo {
-    width: min(60rem, 80vw);
+    width: min(60rem, 70vw);
     height: auto;
     transition: width .2s ease-in-out;
 }
 
-.header-logo:hover {
-    width: min(59rem, 79vw);
+.header-icon {
+    width: min(5rem, 8vw);
+    height: auto;
+    filter: invert(100%);
 }
+
 
 
 
@@ -379,6 +384,8 @@ page-link {
         height: 8rem;
         max-height: 30vh;
         overflow: hidden;
+            grid-template-columns: 10vw 60vw 30vw;
+
     }
 
     .intro {
@@ -437,5 +444,9 @@ page-link {
     .wrapper p {
         font-size: .8rem;
     }
+
+    .header-icon {
+    width: min(6rem, 12vw);
+}
 
 }

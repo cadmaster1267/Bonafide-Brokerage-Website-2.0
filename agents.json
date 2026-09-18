@@ -1,0 +1,20 @@
+[
+    {
+        "agentID": 1001,
+        "firstName": "Joan",
+        "lastName": "Gill",
+        "title": "Broker / Owner",
+        "licenseNumber": "B.1003347",
+        "phone": "(702) 232-4498",
+        "email": "joan.bonafide@gmail.com",
+        "photo": "pictures/house-with-paperwork.jpg",
+        "shortBio": "With years of experience in residential real estate, Joan is dedicated to helping buyers and sellers navigate their next chapter with confidence.",
+        "bio": "Joan Gill is the Broker and Owner of Bonafide Brokerage. Her experience in real estate has given her a strong understanding of the buying and selling process, and she is committed to providing personalized service to every client.",
+        "specialties": [
+            "Residential Real Estate",
+            "Probate",
+            "Home Purchases",
+            "Property Listings"
+        ]
+    }
+]

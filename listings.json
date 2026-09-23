@@ -45,6 +45,7 @@
       {
         "headerUtilities": "Utilities and Green Energy",
         "gas": true,
+        "electric": "2-Phase",
         "sewer": "Shared Septic",
         "solarHookUp": false,
         "networking": "CAT-6 with panel",
@@ -76,6 +77,90 @@
         "dateOnMarket": "September 10, 2026",
         "listingAgreement": "Exclusive Right to Sell",
         "listingStatus": "Sold"
+      }
+    ]
+  },
+
+
+
+
+
+
+
+
+  {
+    "listingID": 1002,
+    "openHouse": "None at the moment.",
+    "price": 619000,
+    "address": "1940 N Moapa Valley Blvd, Moapa Valley, NV 89021",
+    "propertyType": "Improved Land",
+    "commercialORresidential": "Residential",
+    "descriptionShort": "Discover an unpаrаllеled opрortunіty just outside thе vibrаnt energy of Las Vegas, offering a serene retreat perfectly poised for development or the creation of an expansive private estate. This exceptional 5.1-acre parcel, located at 1940 N MOAPA VALLEY BLVD in LOGANDALE, NV, presents a canvas for your grandest visions. The property is uniquely equipped with two water meters and a fully operational well featuring a new pump, ensuring abundant water resources. Furthermore, robust 3-phase power is already established on-site, providing a significant advantage for any ambitious project. Whether you envision subdividing for multiple homes or crafting a magnificent luxury compound, the infrastructure is in place to support your aspirations. A photo provided of a proposed idea to subdivide but has not been submitted to county and provided only to show 1 possibility this property has to offer. This vast, level expanse, bordered by a clear road and framed by picturesque distant mountains, provides a stunning backdrop for diverse outdoor uses. Embrace the freedom to design a lifestyle that harmonizes with the tranquil desert landscape, all while benefiting from the convenience of existing utilities. The potential here is limited only by your imagination, inviting you to create something truly extraordinary in a sought-after location.",
+    "listingNumberMLS": "2806493",
+    "HVAC": false,
+    "images": [
+      "listing_pictures/1940 North Moapa Valley Blvd/1940 N Moapa Valley Blvd - 01.jpg",
+      "listing_pictures/1940 North Moapa Valley Blvd/1940 N Moapa Valley Blvd - 02.jpg",
+      "listing_pictures/1940 North Moapa Valley Blvd/1940 N Moapa Valley Blvd - 03.jpg",
+      "listing_pictures/1940 North Moapa Valley Blvd/1940 N Moapa Valley Blvd - 04.jpg"
+    ],
+    "features": [
+      {
+        "headerInterior": "Interior",
+        "bedrooms": "-",
+        "fullBaths": "-",
+        "halfBaths": "-"
+      },
+      {
+        "headerProperty": "Property",
+        "garage": "-",
+        "stories": "-",
+        "lotSize": "5.1 acres",
+        "squareFootage": "-",
+        "yearBuilt": "-",
+        "parcelNumber": "07002101011",
+        "zoning": "Family-1/2-2 Acres,Other",
+        "newConstruction": false,
+        "foundation": "-",
+        "roof": "-",
+        "pool": false,
+        "rvParking": false
+      },
+      {
+        "headerUtilities": "Utilities and Green Energy",
+        "gas": false,
+        "electric": "3-Phase",
+        "sewer": "Sewer Ready",
+        "solarHookUp": false,
+        "networking": "-",
+        "smartHomeCertified": false,
+        "energyStarRating": "-",
+        "water": "Well/Public (2 Public Meters)"
+      },
+      {
+        "headerCommunity": "Community and HOA",
+        "hasHOA": false,
+        "feesHOA": "-",
+        "region": "Moapa Valley"
+      },
+      {
+         "headerSchools": "Schools",
+         "schoolDistrict": "Clark County School District",
+         "schoolDistrictSite": "https://www.ccsd.net",
+         "elememtarySchool": "Cozine Elementary School",
+         "elememtarySchoolSite": "https://www.cozineclimbers.com/",
+         "middleSchool": "Swainston Middle School",
+         "middleSchoolSite": "https://www.swainstonms.org/",
+         "highSchool": "Cheyenne High School",
+         "highSchoolSite": "https://www.cheyennehs.org/"
+      },
+      {
+        "headerFinancial": "Value and Listing Details",
+        "pricePSQF": "-",
+        "taxAssessedValue": 77440,
+        "dateOnMarket": "Aug 12, 2026",
+        "listingAgreement": "Exclusive Right to Sell",
+        "listingStatus": "Active"
       }
     ]
   }

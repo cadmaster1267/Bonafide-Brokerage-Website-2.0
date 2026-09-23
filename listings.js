@@ -446,6 +446,11 @@ fetch("listings.json")
             </p>
 
             <p>
+              <strong>Electric:</strong>
+              ${utilities.electric}
+            </p>
+
+            <p>
               <strong>Sewer:</strong>
               ${utilities.sewer}
             </p>

@@ -146,13 +146,13 @@
       {
          "headerSchools": "Schools",
          "schoolDistrict": "Clark County School District",
-         "schoolDistrictSite": "https://www.ccsd.net",
-         "elememtarySchool": "Cozine Elementary School",
-         "elememtarySchoolSite": "https://www.cozineclimbers.com/",
-         "middleSchool": "Swainston Middle School",
-         "middleSchoolSite": "https://www.swainstonms.org/",
-         "highSchool": "Cheyenne High School",
-         "highSchoolSite": "https://www.cheyennehs.org/"
+         "schoolDistrictSite": "https://www.greatschools.org/nevada/las-vegas/clark-county-school-district/",
+         "elememtarySchool": "Grant Bowler Elementary School",
+         "elememtarySchoolSite": "https://www.greatschools.org/nevada/moapa-valley/148-Grant-Bowler-Elementary-School/",
+         "middleSchool": "Mack Lyon Middle School",
+         "middleSchoolSite": "https://www.greatschools.org/nevada/moapa-valley/135-Mack-Lyon-Middle-School/",
+         "highSchool": "Moapa Valley High School",
+         "highSchoolSite": "https://www.greatschools.org/nevada/moapa-valley/80-Moapa-Valley-High-School/"
       },
       {
         "headerFinancial": "Value and Listing Details",

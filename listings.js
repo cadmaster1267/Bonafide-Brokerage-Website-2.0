@@ -404,7 +404,7 @@ fetch("listings.json")
 
             <p>
               <strong>New Construction:</strong>
-              ${property.newConstruction ? "Yes" : "No"}
+              ${property.newConstruction}
             </p>
 
             <p>

@@ -120,7 +120,7 @@
         "yearBuilt": "-",
         "parcelNumber": "07002101011",
         "zoning": "Family-1/2-2 Acres,Other",
-        "newConstruction": false,
+        "newConstruction": "-",
         "foundation": "-",
         "roof": "-",
         "pool": false,
@@ -141,7 +141,7 @@
         "headerCommunity": "Community and HOA",
         "hasHOA": false,
         "feesHOA": "-",
-        "region": "Moapa Valley"
+        "region": "Logandale"
       },
       {
          "headerSchools": "Schools",
